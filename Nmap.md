@@ -83,15 +83,10 @@ nmap -sCV -p 8080,9229 172.17.0.2 -oN targeted.nmap
 
 <img width="960" height="1008" alt="image" src="https://github.com/user-attachments/assets/0d81cb90-83f8-4df3-a5d2-73b28092255f" />
 
+### Análisis Inicial de Puertos Encontrados
 
-## Análisis Inicial de Puertos Encontrados
+    Puerto 8080/tcp (http): Servidor web corriendo en Node.js (Express middleware) con el título "Autoescuela Hackcar - Inicio". Constituye la vía principal para la fase de enumeración web.
 
-    Puerto 8080/tcp (http-proxy): Puerto habitualmente utilizado para servicios web secundarios o proxies.
-
-    Puerto 9229/tcp (unknown): Puerto comúnmente asociado al protocolo de depuración de Node.js (Node.js V8 Inspector).
-
-
-
-
+    Puerto 9229/tcp (unknown / WebSockets): Corresponde a la interfaz de depuración remota de Node.js (V8 Inspector Protocol). La exposición incondicional de este puerto suele representar un vector potencial de ejecución remota de comandos (RCE).
 
 
